@@ -6,7 +6,7 @@ import { Sidebar } from './Sidebar';
 
 const { Content } = Layout;
 
-export const MainLayout = () => {
+export default function MainLayout() {
   const [collapsed, setCollapsed] = useState<boolean>(false);
 
   const toggleCollapse = () => {
@@ -16,17 +16,14 @@ export const MainLayout = () => {
   return (
     <Layout className='min-h-screen bg-gray-50'>
       <Sidebar collapsed={collapsed} />
-      <Layout
-        className='transition-all duration-200'
-        style={{ marginLeft: collapsed ? 80 : 250 }}
-      >
+      <Layout className='transition-all duration-50'>
         <Header collapsed={collapsed} toggleCollapse={toggleCollapse} />
-        <Content className='p-6 overflow-auto'>
-          <div className='bg-white rounded-lg shadow-sm p-6'>
+        <Content className='overflow-auto'>
+          <div className='bg-white  p-4'>
             <Outlet />
           </div>
         </Content>
       </Layout>
     </Layout>
   );
-};
+}

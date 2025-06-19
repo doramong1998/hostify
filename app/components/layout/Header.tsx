@@ -31,9 +31,6 @@ export const Header = ({ collapsed, toggleCollapse }: HeaderProps) => {
           onClick={toggleCollapse}
           className='w-10 h-10 flex items-center justify-center'
         />
-        <h1 className='text-lg font-semibold ml-4'>
-          {collapsed ? '' : 'Bảng điều khiển'}
-        </h1>
       </div>
 
       <div className='flex items-center space-x-4'>

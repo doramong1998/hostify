@@ -25,8 +25,16 @@ export const Sidebar = ({ collapsed }: SidebarProps) => {
       collapsed={collapsed}
       trigger={null}
     >
-      <div className='p-4 h-16 flex items-center'>
-        <h1 className='text-xl font-bold text-primary-600'>Hostify</h1>
+      <div className='p-4 h-16 flex items-center justify-center gap-2'>
+        <HomeOutlined className=' text-xl font-bold text-primary-600' />
+
+        <h1
+          className={`text-xl font-bold text-primary-600 transition-all duration-200 ${
+            collapsed ? 'hidden' : ''
+          }`}
+        >
+          Hostify
+        </h1>
       </div>
 
       <Menu
@@ -55,19 +63,19 @@ export const Sidebar = ({ collapsed }: SidebarProps) => {
             label: 'Giao dịch',
           },
           {
+            type: 'divider',
+          },
+          {
             key: 'settings',
             icon: <SettingOutlined />,
             label: 'Cài đặt',
           },
-          {
-            type: 'divider',
-          },
-          {
-            key: 'logout',
-            icon: <LogoutOutlined />,
-            label: 'Đăng xuất',
-            danger: true,
-          },
+          // {
+          //   key: 'logout',
+          //   icon: <LogoutOutlined />,
+          //   label: 'Đăng xuất',
+          //   danger: true,
+          // },
         ]}
       />
     </Sider>

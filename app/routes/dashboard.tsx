@@ -1,13 +1,4 @@
-import {
-  Card,
-  Statistic,
-  Calendar,
-  Badge,
-  Row,
-  Col,
-  Typography,
-  ConfigProvider,
-} from 'antd';
+import { Card, Statistic, Calendar, Badge, Row, Col, Typography } from 'antd';
 import {
   UserOutlined,
   HomeOutlined,
@@ -87,7 +78,7 @@ const Dashboard = () => {
   };
 
   return (
-    <div className='p-6'>
+    <div className=''>
       <Title level={2} className='mb-6'>
         Tổng quan
       </Title>
